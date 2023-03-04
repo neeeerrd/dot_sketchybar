@@ -16,7 +16,8 @@ sketchybar --bar margin=10               \
                  border_color=0xfff5e0dc \
                  border_width=2          \
                  topmost=on              \
-                 y_offset=2             \
+                 y_offset=2.9              \
+                 sticky=on
 
 ##### Changing Defaults #####
 # We now change some default values that are applied to all further items
@@ -25,6 +26,7 @@ sketchybar --bar margin=10               \
 
 sketchybar --default label.font="SF Pro:Bold:14.0" \
                      label.color=0xfff5e0dc                \
+                     icon.font="SF Pro:Bold:14.0"         \
                      icon.color=0xfff5e0dc                 \
                      padding_left=5                        \
                      padding_right=5                       \
@@ -63,14 +65,29 @@ sketchybar --add item clock center                              \
                          update_freq=120                       \
            --subscribe battery system_woke power_source_change \
                                                                \
-           --add item stat left                       \
-           --set stat icon=􀣺                           \
+           --add item apple left                       \
+           --set apple icon=􀣺                          \
+                       click_script="open -a 'System Settings'"  \
            \
            --add event spotify_update $SPOTIFY_EVENT \
            \
            --add item spotify left \
            --set spotify script="$PLUGIN_DIR/spotify.sh" \
-           --subscribe spotify spotify_update \
+           --subscribe spotify spotify_update mouse.entered.global mouse.exited.global \
+           \
+           --add item spotify.back left \
+           --set spotify.back script="$PLUGIN_DIR/spotify.sh" \
+                              icon=􀊊 \
+           --subscribe spotify.back mouse.clicked \
+           \
+           --add item spotify.playpause left \
+           --set spotify.playpause script="$PLUGIN_DIR/spotify.sh" \
+           --subscribe spotify.playpause mouse.clicked \
+           \
+           --add item spotify.forward left \
+           --set spotify.forward script="$PLUGIN_DIR/spotify.sh" \
+                                 icon=􀊌 \
+           --subscribe spotify.forward mouse.clicked \
            \
            --add item cpu right \
            --set cpu script="$PLUGIN_DIR/cpu.sh" \
