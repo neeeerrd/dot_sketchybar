@@ -67,7 +67,7 @@ sketchybar --add item clock center                              \
                                                                \
            --add item apple left                       \
            --set apple icon=􀣺                          \
-                       click_script="open -a 'System Settings'"  \
+                       click_script="open -a 'Raycast'"  \
            \
            --add event spotify_update $SPOTIFY_EVENT \
            \
