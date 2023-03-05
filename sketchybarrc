@@ -73,7 +73,6 @@ sketchybar --add item clock center                              \
            \
            --add item spotify left \
            --set spotify script="$PLUGIN_DIR/spotify.sh" \
-                         drawing=off \
            --subscribe spotify spotify_update mouse.entered.global mouse.exited.global \
            \
            --add item spotify.back left \
