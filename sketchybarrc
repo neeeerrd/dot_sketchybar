@@ -8,8 +8,8 @@ SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar height=38                 
-sketchybar --bar margin=10               \
+sketchybar --bar height=38               \                
+                 margin=10               \
                  corner_radius=10        \
                  position=bottom         \
                  color=0xff1e1e2e        \
