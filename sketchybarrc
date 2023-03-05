@@ -73,20 +73,24 @@ sketchybar --add item clock center                              \
            \
            --add item spotify left \
            --set spotify script="$PLUGIN_DIR/spotify.sh" \
+                         drawing=off \
            --subscribe spotify spotify_update mouse.entered.global mouse.exited.global \
            \
            --add item spotify.back left \
            --set spotify.back script="$PLUGIN_DIR/spotify.sh" \
+                              drawing=off \
                               icon=􀊊 \
            --subscribe spotify.back mouse.clicked \
            \
            --add item spotify.playpause left \
            --set spotify.playpause script="$PLUGIN_DIR/spotify.sh" \
+                                   drawing=off \
            --subscribe spotify.playpause mouse.clicked \
            \
            --add item spotify.forward left \
            --set spotify.forward script="$PLUGIN_DIR/spotify.sh" \
                                  icon=􀊌 \
+                                 drawing=off \
            --subscribe spotify.forward mouse.clicked \
            \
            --add item cpu right \
